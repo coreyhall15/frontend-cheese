@@ -1,8 +1,9 @@
 import URL from "./url"
 
 export async function indexLoader() {
-  const response = await fetch(URL + "/cheese")
+  const response = await fetch( "https://cheese-back.onrender.com/cheese")
   const cheeses = await response.json()
+  console.log(response)
   return cheeses
 }
 

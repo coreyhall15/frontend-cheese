@@ -1,9 +1,10 @@
 import { useLoaderData, Form, Link } from "react-router-dom"
-import { Flex, Card } from "../styles"
+// import { Flex, Card } from "../styles"
 
 export default function Index(props) {
   const cheeses = useLoaderData()
-
+  
+  //  return <h1>Hello world</h1>
   return (
     <div>
       <Form action="/create" method="post">
@@ -12,17 +13,17 @@ export default function Index(props) {
         <input type="text" name="image" placeholder="Cheese image URL" />
         <button>Create New Cheese</button>
       </Form>
-      <Flex>
+      <div>
         {cheeses.map((cheese) => (
-          <Card key={cheese._id}>
+          <div key={cheese._id}>
             <Link to={`/${cheese._id}`}>
               <h1>{cheese.name}</h1>
             </Link>
             <h2>{cheese.countryOfOrigin}</h2>
             <img src={cheese.image} alt={cheese.name} />
-          </Card>
+          </div>
         ))}
-      </Flex>
+      </div>
     </div>
   )
 }
