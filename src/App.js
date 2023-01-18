@@ -6,8 +6,9 @@ function App() {
     <>
       <Header>The Cheese App</Header>
       <div className="App">
-        <Outlet />
-      </div>
+      <Header />
+      <Outlet />
+    </div>
     </>
   )
 }
