@@ -1,2 +1,2 @@
-const URL = "https://backend-cheese1.onrender.com"
+const URL = "https://cheese-back.onrender.com"
 export default URL
